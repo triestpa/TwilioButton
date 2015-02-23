@@ -41,7 +41,7 @@ router.post('/call', function(req, res, next) {
 	    from:'+1 781-917-3133',
 	    url:'http://104.131.31.123/twiml',
 	    record: "false",
-	    Method: "GET"
+	    Method: "POST"
 	}, function(err, call) {
 		if (!err) {
 	    	console.log('This call\'s unique ID is: ' + call.sid);
