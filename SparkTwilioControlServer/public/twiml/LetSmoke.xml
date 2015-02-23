@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Response>
 	<Pause length="2"/>
-    <Say voice="woman">Yo do you want to smoke?</Say>
-   	<Play>http://104.131.31.123:3000/music</Play>
+    <Say voice="woman">Yo</Say>
+    <Pause length="1"/>
+	<Say voice="woman">do you want to smoke?</Say>
+	 <Pause length="1"/>
+	 <Say voice="woman">Lets roll a spleezy</Say>
     <Hangup/>
 </Response>
