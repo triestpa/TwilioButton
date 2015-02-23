@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Response>
-	<Pause length="3"/>
-    <Say>What's up motherfucker?</Say>
+	<Pause length="2"/>
+    <Say>Shut up dad!</Say>
     <Hangup/>
    <!-- <Play>https://api.twilio.com/Cowbell.mp3</Play> -->
 </Response>
