@@ -16,7 +16,7 @@ router.get('/', function(req, res, next) {
 });
 
 
-router.get('/twiml', function(req, res, next) {
+router.post('/twiml', function(req, res, next) {
     // Create a TwiML response
     var resp = new twilio.TwimlResponse();
 
@@ -39,7 +39,9 @@ router.post('/call', function(req, res, next) {
 	client.makeCall({
 	    to:'+16178494627',
 	    from:'+1 781-917-3133',
-	    url:'http://104.131.31.123/twiml'
+	    url:'http://104.131.31.123/twiml',
+	    record: "false",
+	    Method: "GET"
 	}, function(err, call) {
 		if (!err) {
 	    	console.log('This call\'s unique ID is: ' + call.sid);
