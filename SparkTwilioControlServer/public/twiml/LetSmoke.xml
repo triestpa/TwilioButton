@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Response>
+	<Pause length="2"/>
+    <Say voice="woman">Yo do you want to smoke?</Say>
+   	<Play>http://104.131.31.123:3000/twiml</Play>
+    <Hangup/>
+</Response>

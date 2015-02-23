@@ -85,4 +85,21 @@ router.post('/text', function(req, res, next) {
 });
 
 
+router.get('/music', function(req, res, next) {
+	var options = {
+		root:'public/',
+	    dotfiles: 'allow'
+  	};
+	res.sendFile('music/Sanctified.mp3', options, function (err) {
+	    if (err) {
+	      console.log(err);
+	      res.status(err.status).end();
+	    }
+	    else {
+	      console.log('Sent Music');
+	    }
+	  });
+});
+
+
 module.exports = router;
