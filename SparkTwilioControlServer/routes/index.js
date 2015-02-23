@@ -8,7 +8,7 @@ var twilio = require('twilio');
 // twilio back end
 var client = new twilio.RestClient('ACfb7b4de6de01b6b7af8e317fcbefe060', 'afc8a5425ab2844dce905e8ddc68f060');
 
-var serverIP = "104.131.31.123";
+var serverIP = "104.131.31.123:3000";
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -39,7 +39,7 @@ router.post('/call', function(req, res, next) {
 	client.makeCall({
 	    to:'+16178494627',
 	    from:'+1 781-917-3133',
-	    url:'http://104.131.31.123/twiml',
+	    url:'http://104.131.31.123:3000/twiml',
 	    record: "false",
 	    Method: "POST"
 	}, function(err, call) {
