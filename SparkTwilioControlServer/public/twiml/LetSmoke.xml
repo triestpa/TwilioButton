@@ -2,6 +2,6 @@
 <Response>
 	<Pause length="2"/>
     <Say voice="woman">Yo do you want to smoke?</Say>
-   	<Play>http://104.131.31.123:3000/twiml</Play>
+   	<Play>http://104.131.31.123:3000/music</Play>
     <Hangup/>
 </Response>
