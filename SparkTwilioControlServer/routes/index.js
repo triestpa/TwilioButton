@@ -17,20 +17,19 @@ router.get('/', function(req, res, next) {
 
 
 router.post('/twiml', function(req, res, next) {
-    // Create a TwiML response
-    var resp = new twilio.TwimlResponse();
-
-    // The TwiML response object will have functions on it that correspond
-    // to TwiML "verbs" and "nouns". This example uses the "Say" verb.
-    // Passing in a string argument sets the content of the XML tag.
-    // Passing in an object literal sets attributes on the XML tag.
-    resp.say({voice:'man'}, 'This is a test bro');
-
-    //Render the TwiML document using "toString"
-    res.writeHead(200, {
-        'Content-Type':'text/xml'
-    });
-    res.end(resp.toString());
+	var options = {
+		root:'public/',
+	    dotfiles: 'allow'
+  	};
+	res.sendFile('twiml/SimpleTwiml.xml', options, function (err) {
+	    if (err) {
+	      console.log(err);
+	      res.status(err.status).end();
+	    }
+	    else {
+	      console.log('Sent Twiml');
+	    }
+	  });
 });
 
 
