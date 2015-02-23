@@ -8,7 +8,7 @@ var twilio = require('twilio');
 // twilio back end
 var client = new twilio.RestClient('ACfb7b4de6de01b6b7af8e317fcbefe060', 'afc8a5425ab2844dce905e8ddc68f060');
 
-var serverIP = 104.131.31.123;
+var serverIP = "104.131.31.123";
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
